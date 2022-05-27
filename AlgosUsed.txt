@@ -1,0 +1,29 @@
+Here only directed graph is formed... because the children is derived from the parent.
+this structure can be called a tree also but tree has no cycles so this is a graph.
+Tree is also a subset of directed graph.
+Cycle detection in directed Graph
+
+A1 ---> B1 ----> A1 
+
+nodes --> cells in our scenario
+
+Algo :
+
+1. initialize dfsVisited and Visited
+2. for all nodes from 0 to n run a dfs for the ones where
+Visited[node] == false;
+3.if Visited[node] == true && dfsVisited[node] == true => CYCLE IS PRESENT
+3. else set Visited[node] = true and dfsVisited[node] = true for cur node
+4. while backtracking set dfsVisited[node] = false;
+5. at the for loops end return with no cycle present; 
+
+Colour Tracking (Cyclic Path) --> Uses Cycle detection Algo
+--- >> Delay (For the color to be visible)
+--- >> Wait  (Syncronization)
+
+
+JavaScript Features--->
+--- >> setTimeout (delay)
+--- >> promises and async await (wait)
+
+to convert asysnc task into sync ---->> wrap set timeout into a promise
